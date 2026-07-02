@@ -1,0 +1,133 @@
+.home-page {
+  min-height: 100vh;
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* Home Container - Split Layout */
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.form-section {
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.list-section {
+  background: #f9fafb;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Section Badges and Subtitles */
+.user-badge,
+.admin-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  margin-left: 2.5rem;
+  margin-top: 2rem;
+}
+
+.user-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.admin-badge {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.user-subtitle,
+.admin-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  margin-left: 2.5rem;
+  margin-right: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .form-section,
+  .list-section {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .list-section {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section,
+  .list-section {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .list-section {
+    border-bottom: none;
+  }
+
+  .user-badge,
+  .admin-badge {
+    margin-left: 1.5rem;
+  }
+
+  .user-subtitle,
+  .admin-subtitle {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+
+  .user-badge,
+  .admin-badge {
+    margin-left: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .user-subtitle,
+  .admin-subtitle {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.85rem;
+  }
+}
