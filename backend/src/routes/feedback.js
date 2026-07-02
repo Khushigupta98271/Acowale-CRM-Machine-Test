@@ -30,7 +30,7 @@ router.post(
 );
 
 router.get('/', getFeedbackList);
-router.get('/:id', getFeedbackById);
 router.get('/analytics/summary', getAnalyticsSummary);
+router.get('/:id', getFeedbackById);
 
 module.exports = router;
